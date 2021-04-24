@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.12.1">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Angajat">
+            <fields>
+                <field type="STRING" length="255" name="idAngajat" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="numeAngajat" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="functieAngajat" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Bug">
+            <fields>
+                <field type="INTEGER" length="255" name="idBug" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="numeRaportor" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="titluBug" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="descriereProblema" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dataSesizareBug" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="dataRaportareBug" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="deadlineRezolvareBug" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="poateFiReprodus" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="poateFiRezolvatDeAS" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="suficienteDate" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="bug" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="impactBug" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="statusBug" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Sarcina">
+            <fields>
+                <field type="INTEGER" length="255" name="idSarcina" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Bug" fetchType="LAZY" name="idBug" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="titluSarcina" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="testerAsignat" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="timpEstimat" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="impactEstimat" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="programatorAsignat" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="statusSarcina" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="confirmareRezolvare" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

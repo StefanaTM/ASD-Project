@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="BugManagement">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="c_Andreea">
+      <firstName>Andreea</firstName>
+      <lastName>Popescu</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">coordonator</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="t_Daniel">
+      <firstName>Daniel</firstName>
+      <lastName>Petrescu</lastName>
+      <manager>c_Andreea</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">tester</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="p_Catalina">
+      <firstName>Catalina</firstName>
+      <lastName>Marinescu</lastName>
+      <manager>c_Andreea</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">programator</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="a_Flavius">
+      <firstName>Flavius</firstName>
+      <lastName>Calinescu</lastName>
+      <manager>c_Andreea</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">agentsuport</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="Programator">
+      <displayName>Programator</displayName>
+    </role>
+    <role name="Tester">
+      <displayName>Tester</displayName>
+    </role>
+    <role name="AgentSuport">
+      <displayName>Agent Suport</displayName>
+    </role>
+    <role name="Coordonator">
+      <displayName>Coordonator</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Supervizori">
+      <displayName>Supervizori</displayName>
+    </group>
+    <group name="Angajati">
+      <displayName>Angajati</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>c_Andreea</userName>
+      <roleName>Coordonator</roleName>
+      <groupName>Supervizori</groupName>
+    </membership>
+    <membership>
+      <userName>t_Daniel</userName>
+      <roleName>Tester</roleName>
+      <groupName>Angajati</groupName>
+    </membership>
+    <membership>
+      <userName>p_Catalina</userName>
+      <roleName>Programator</roleName>
+      <groupName>Angajati</groupName>
+    </membership>
+    <membership>
+      <userName>a_Flavius</userName>
+      <roleName>AgentSuport</roleName>
+      <groupName>Angajati</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>
