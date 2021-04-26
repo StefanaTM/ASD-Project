@@ -26,6 +26,8 @@
                 <field type="BOOLEAN" length="255" name="bug" nullable="true" collection="false"/>
                 <field type="INTEGER" length="255" name="impactBug" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="statusBug" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="esteFormular" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="esteMailSauApel" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
