@@ -82,8 +82,8 @@
       <connections xmi:type="process:SequenceFlow" xmi:id="_tXDWMKIBEeuJi_mvpaN91w" name="Nu" target="_tXDWCKIBEeuJi_mvpaN91w" source="_tXDWBKIBEeuJi_mvpaN91w" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_tXDWMaIBEeuJi_mvpaN91w"/>
         <condition xmi:type="expression:Expression" xmi:id="_tXDWMqIBEeuJi_mvpaN91w" name="suficienteDate == false" content="suficienteDate == false" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:Data" xmi:id="_nAbnMKaYEeurTcHnKhZaZA" name="suficienteDate" dataType="_tXD9TKIBEeuJi_mvpaN91w">
-            <defaultValue xmi:type="expression:Expression" xmi:id="_nAbnMaaYEeurTcHnKhZaZA" name="false" content="false" returnType="java.lang.Boolean"/>
+          <referencedElements xmi:type="process:Data" xmi:id="_YwsnsKa8EeurTcHnKhZaZA" name="suficienteDate" dataType="_tXD9TKIBEeuJi_mvpaN91w">
+            <defaultValue xmi:type="expression:Expression" xmi:id="_Ywsnsaa8EeurTcHnKhZaZA" name="false" content="false" returnType="java.lang.Boolean"/>
           </referencedElements>
         </condition>
       </connections>
@@ -97,8 +97,8 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_tXDWO6IBEeuJi_mvpaN91w" name="Da" target="_tXDWF6IBEeuJi_mvpaN91w" source="_tXDWBKIBEeuJi_mvpaN91w">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_tXDWPKIBEeuJi_mvpaN91w"/>
-        <condition xmi:type="expression:Expression" xmi:id="_tXDWPaIBEeuJi_mvpaN91w" name="suficienteDate" content="if (suficienteDate==true) {&#xD;&#xA;&#x9;return true&#xD;&#xA;}else return false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:Data" xmi:id="_vpjZIKaYEeurTcHnKhZaZA" name="suficienteDate" dataType="_tXD9TKIBEeuJi_mvpaN91w"/>
+        <condition xmi:type="expression:Expression" xmi:id="_tXDWPaIBEeuJi_mvpaN91w" name="if (suficienteDate==true) {&#xD;&#xA;&#x9;return true&#xD;&#xA;}else return false" content="suficienteDate==true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_rNy1IKa8EeurTcHnKhZaZA" name="suficienteDate" dataType="_tXD9TKIBEeuJi_mvpaN91w"/>
         </condition>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_tXDWQKIBEeuJi_mvpaN91w" name="Agent suport"/>
@@ -156,7 +156,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_tXDWa6IBEeuJi_mvpaN91w" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_tXDWbKIBEeuJi_mvpaN91w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_tXDWbaIBEeuJi_mvpaN91w">
-            <targetForm xmi:type="expression:Expression" xmi:id="_tXDWbqIBEeuJi_mvpaN91w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_ou5e4Ka-EeurTcHnKhZaZA" name="newForm" content="bfd263d3-89e8-4d73-bca5-f871b43b00ad" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_tXDWb6IBEeuJi_mvpaN91w"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_tXDWcKIBEeuJi_mvpaN91w" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -711,8 +711,8 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_tXDYL6IBEeuJi_mvpaN91w" name="Nu" target="_tXDWwaIBEeuJi_mvpaN91w" source="_tXDWfaIBEeuJi_mvpaN91w">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_tXDYMKIBEeuJi_mvpaN91w"/>
-        <condition xmi:type="expression:Expression" xmi:id="_tXDYMaIBEeuJi_mvpaN91w" name="poateFiRezolvatDeAS" content="if (poateFiRezolvatDeAS == false){&#xD;&#xA;&#x9;return true&#xD;&#xA;}else return false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:Data" xmi:id="_FvFXwKaXEeurTcHnKhZaZA" name="poateFiRezolvatDeAS" dataType="_tXD9TKIBEeuJi_mvpaN91w"/>
+        <condition xmi:type="expression:Expression" xmi:id="_tXDYMaIBEeuJi_mvpaN91w" name="poateFiRezolvatDeAS" content="if (bug.poateFiRezolvatDeAS == false){&#xD;&#xA;&#x9;return true&#xD;&#xA;}else return false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_rSyNYKa9EeurTcHnKhZaZA" name="bug" dataType="_tXD9VKIBEeuJi_mvpaN91w" className="com.company.model.Bug"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_tXDYNKIBEeuJi_mvpaN91w" target="_tXDW5aIBEeuJi_mvpaN91w" source="_tXDWyqIBEeuJi_mvpaN91w">
